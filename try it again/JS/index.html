@@ -10,6 +10,17 @@
         const getNumber = document.getElementById("textBox").value;
         document.getElementById("setNumber").innerText = getNumber;
       }
+
+      function checkNumber() {
+        const getNumber = document.getElementById("textBox").value;
+        if (getNumber > 100) {
+          alert("You should put less than 100");
+        } else if (getNumber < 1) {
+          alert("You should put 'more than' 1");
+        } else {
+          alert("You put " + getNumber);
+        }
+      }
     </script>
   </head>
   <body>
@@ -27,6 +38,6 @@
       value=""
       onkeyup="currentNumber()"
     />
-    <button id="clickBtn">Click here!</button>
+    <button id="clickBtn" onclick="checkNumber()">Click here!</button>
   </body>
 </html>
