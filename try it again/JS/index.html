@@ -5,33 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Less than 100</title>
-    <script>
-      //기입한 숫자를 컴포넌트 창에 표출
-      function currentNumber() {
-        const getNumber = document.getElementById("textBox").value;
-        document.getElementById("setNumber").innerText = getNumber;
-      }
-      // 100보다 작거나 같은 수  or  1보다 크거나 같은 수 요구
-      function checkNumber() {
-        const getNumber = document.getElementById("textBox").value;
-        if (getNumber > 100) {
-          alert("You should put 'less than' 100");
-        } else if (getNumber < 1) {
-          alert("You should put 'more than' 1");
-        } else {
-          alert("You put " + getNumber);
-        }
-      }
-      //정수가 아닌 수를 기입했을 경우 경고창 생성
-      function wantInteger() {
-        const makeNumber = Number(document.getElementById("textBox").value);
-        if (Number.isInteger(makeNumber)) {
-          return;
-        } else {
-          alert("You should put 'Integer'");
-        }
-      }
-    </script>
+    <script src="/less_than_100.js"></script>
   </head>
   <body>
     <h1>Put any number that less than 100 as integers</h1>
