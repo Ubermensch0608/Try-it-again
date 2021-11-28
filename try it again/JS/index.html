@@ -5,10 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Less than 100</title>
+    <script>
+      function currentNumber() {
+        const getNumber = document.getElementById("textBox").value;
+        document.getElementById("setNumber").innerText = getNumber;
+      }
+    </script>
   </head>
   <body>
-    <h1>Put a number that less than 100 as integer</h1>
-    <input type="text" placeholder="type any numer" />
-    <button>Click here!</button>
+    <h1>Put any number that less than 100 as integers</h1>
+    <h5>
+      <div>
+        You've put
+        <span id="setNumber"></span>
+      </div>
+    </h5>
+    <input
+      id="textBox"
+      type="text"
+      placeholder="type any number"
+      value=""
+      onkeyup="currentNumber()"
+    />
+    <button id="clickBtn">Click here!</button>
   </body>
 </html>
