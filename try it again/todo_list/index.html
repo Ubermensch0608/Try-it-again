@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Todo List</title>
+    <script>
+      function TodoHandler() {
+        makeTag();
+        setTodo();
+      }
+      function makeTag() {}
+
+      function setTodo() {
+        const makeLi = document.createElement("li");
+        const headingLi = document
+          .querySelector(".motherUl")
+          .appendChild(makeLi);
+        const getTodoText = document.getElementById("addTodoBox").value;
+        document.querySelector("li:last-child").innerText = getTodoText;
+
+        const makeDelButton = document.createElement("button");
+        headingLi.appendChild(makeDelButton);
+        document.querySelector("li:last-child button").innerHTML = "❌";
+      }
+
+      function resetTextBox() {
+        document.getElementById("addTodoBox").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Today I'm gonna do...</h1>
+    <input id="addTodoBox" type="text" required />
+    <button onclick="TodoHandler(), resetTextBox()">추가</button>
+    <ul class="motherUl"></ul>
+  </body>
+</html>
